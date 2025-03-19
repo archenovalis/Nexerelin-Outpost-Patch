@@ -2,19 +2,17 @@ package nexerelin_outpost_patch;
 
 import com.fs.starfarer.api.Global;
 import exerelin.ExerelinConstants;
-import exerelin.utilities.NexConfig;
 import org.json.JSONObject;
 
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-public class NexConfigOutpostPatch extends NexConfig {
+public class NexConfigOutpostPatch {
+    public static final String CONFIG_PATH = "exerelin_config.json";
 
     public static boolean outpostsAreColonies = false;
 
     public static void loadSettings() {
-        log.info("NexConfigOutpostPatch.loadSettings: Starting");
-        NexConfig.loadSettings();
 
         try {
             log.info("NexConfigOutpostPatch.loadSettings: Loading merged JSON from " + CONFIG_PATH);
@@ -27,10 +25,5 @@ public class NexConfigOutpostPatch extends NexConfig {
             throw new RuntimeException("Failed to load patched config: " + e.getMessage(), e);
         }
         log.info("NexConfigOutpostPatch.loadSettings: Completed");
-    }
-
-    static {
-        log.info("NexConfigOutpostPatch: Static initializer calling loadSettings");
-        loadSettings();
     }
 }
