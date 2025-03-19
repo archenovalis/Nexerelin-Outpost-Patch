@@ -1,0 +1,20 @@
+{
+    "id": "nexerelin-outpost-patch",
+    "name": "Nexerelin Outpost Patch",
+    "author": "Archie",
+    "utility": "false",
+    "version": "1.0.0",
+    "description": "Patch for Nexerelin's Outposts",
+    "gameVersion": "0.97a-RC11",
+    "totalConversion": false,
+    "jars": [
+        "jars/Nexerelin-Outpost-Patch.jar"
+    ],
+    "dependencies": [
+        {
+            "id": "nexerelin",
+            "name": "Nexerelin"
+        }
+    ],
+    "modPlugin": "ExerelinModPluginOutpostPatch"
+}
